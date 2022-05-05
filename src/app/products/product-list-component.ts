@@ -14,7 +14,7 @@ export class ProductListComponent implements OnInit, OnDestroy {
     imageMargin: number = 2;
     showImage: boolean = false;    
     errorMessage: string = '';
-    sub: Subscription;
+    sub!: Subscription;
 
     private _listFilter: string = '';
     get listFilter(): string {
@@ -28,7 +28,7 @@ export class ProductListComponent implements OnInit, OnDestroy {
     }
 
     filteredProducts: IProduct[] = [];
-    products: IProduct[];
+    products: IProduct[] = [];
     
     constructor(private productService: ProductService) {
     }
